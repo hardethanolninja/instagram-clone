@@ -444,14 +444,17 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
-.col-span-2 {
-  grid-column: span 2 / span 2;
+.col-span-4 {
+  grid-column: span 4 / span 4;
 }
 .mx-auto {
   margin-left: auto;
@@ -478,17 +481,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-2 {
   margin-bottom: 0.5rem;
 }
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
 .mt-5 {
   margin-top: 1.25rem;
 }
 .mt-4 {
   margin-top: 1rem;
 }
-.mr-10 {
-  margin-right: 2.5rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
 }
 .flex {
   display: flex;
@@ -511,6 +517,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-2 {
   height: 0.5rem;
 }
+.h-4 {
+  height: 1rem;
+}
 .w-full {
   width: 100%;
 }
@@ -529,17 +538,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-2\/5 {
   width: 40%;
 }
-.w-16 {
-  width: 4rem;
-}
-.w-10 {
-  width: 2.5rem;
-}
-.w-1\/2 {
-  width: 50%;
-}
 .w-2\/3 {
   width: 66.666667%;
+}
+.w-16 {
+  width: 4rem;
 }
 .max-w-screen-lg {
   max-width: 1024px;
@@ -620,6 +623,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .text-center {
   text-align: center;
 }
@@ -671,11 +678,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 body {
   background-color: #fafafa;
-}
-
-.hover\:bg-fuchsia-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 70 239 / var(--tw-bg-opacity));
 }
 
 .hover\:text-black-faded:hover {
