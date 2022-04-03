@@ -51,7 +51,15 @@ export default function Actions({
                 : 'text-black-light'
             }`}
           />
-          <ChatIcon className="w-8 text-black-light select-none cursor-pointer" />
+          <ChatIcon
+            onClick={handleFocus}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleFocus();
+              }
+            }}
+            className="w-8 text-black-light select-none cursor-pointer"
+          />
         </div>
       </div>
       <div className="p-4 py-0">
