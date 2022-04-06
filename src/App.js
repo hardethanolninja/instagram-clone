@@ -8,6 +8,7 @@ import useAuthListener from './hooks/use-auth-listener';
 const Login = lazy(() => import('./pages/login'));
 const SignUp = lazy(() => import('./pages/sign-up'));
 const Dashboard = lazy(() => import('./pages/dashboard'));
+const Profile = lazy(() => import('./pages/profile'));
 const NotFound = lazy(() => import('./pages/not-found'));
 
 function App() {
@@ -20,7 +21,11 @@ function App() {
           <Routes>
             <Route path={ROUTES.LOGIN} element={<Login />} />
             <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
-            <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+            <Route
+              path={ROUTES.DASHBOARD}
+              element={user ? <Dashboard /> : <Login />}
+            />
+            <Route path={ROUTES.PROFILE} element={<Profile />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
