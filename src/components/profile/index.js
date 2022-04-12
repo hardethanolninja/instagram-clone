@@ -1,4 +1,4 @@
-import { useReducer, useEffect } from 'react';
+import { useReducer, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Header from './header';
@@ -9,28 +9,36 @@ import {
 } from '../../services/firebase';
 
 export default function Profile({ user }) {
-  const reducer = (state, newState) => ({ ...state, ...newState });
-  const initialState = {
-    profile: {},
-    photosCollection: [],
-    followerCount: 0,
-  };
+  //   const reducer = (state, newState) => ({ ...state, ...newState });
+  //   const initialState = {
+  //     profile: {},
+  //     photosCollection: [],
+  //     followerCount: 0,
+  //   };
 
-  const [{ profile, photosCollection, followerCount }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  //   const [{ profile, photosCollection, followerCount }, dispatch] = useReducer(
+  //     reducer,
+  //     initialState
+  //   );
+
+  const [profile, setProfile] = useState({});
+  const [photosCollection, setPhotosCollection] = useState([]);
+  const [followerCount, setFollowerCount] = useState(0);
 
   useEffect(() => {
     async function getProfileInfoAndPhotos() {
       const photos = await getUserPhotosByUsername(user.username);
-      dispatch({
-        profile: user,
-        photosCollection: photos,
-        followerCount: user.followers.length,
-      });
-      console.log(photos);
+      //   dispatch({
+      //     profile: user,
+      //     photosCollection: photos,
+      //     followerCount: user.followers.length,
+      //   });
+      setProfile(user);
+      setPhotosCollection(photos);
+      setFollowerCount(user.followers.length);
+      console.log('initial follower count', followerCount);
     }
+
     if (user.username) {
       getProfileInfoAndPhotos();
     }
@@ -38,9 +46,13 @@ export default function Profile({ user }) {
 
   return (
     <>
-      <Header />
+      <Header
+        photosCount={photosCollection ? photosCollection.length : 0}
+        profile={profile}
+        followerCount={followerCount}
+        setFollowerCount={setFollowerCount}
+      />
       <Photos photos={photosCollection} />
-      <p>Hello {user.username}</p>
     </>
   );
 }
