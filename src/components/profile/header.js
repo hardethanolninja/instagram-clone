@@ -24,10 +24,12 @@ export default function Header({
   const [isFollowingProfile, setIsFollowingProfile] = useState();
   const activeBtnFollow = user.username && user.username !== profileUsername;
 
-  let num = followers.length;
-
   const handleToggleFollow = async (e) => {
     e.persist();
+
+    setFollowerCount(
+      isFollowingProfile ? followerCount - 1 : followerCount + 1
+    );
 
     setIsFollowingProfile((isFollowingProfile) => !isFollowingProfile);
 
@@ -38,7 +40,6 @@ export default function Header({
       profileUserId,
       user.userId
     );
-    setFollowerCount(followers.length);
   };
 
   useEffect(() => {

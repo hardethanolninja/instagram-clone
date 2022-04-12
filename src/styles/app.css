@@ -496,17 +496,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-12 {
   margin-bottom: 3rem;
 }
-.mt-5 {
-  margin-top: 1.25rem;
-}
 .mt-4 {
   margin-top: 1rem;
 }
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
 .mr-10 {
   margin-right: 2.5rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 .flex {
   display: flex;
@@ -553,14 +553,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-2\/5 {
   width: 40%;
 }
+.w-40 {
+  width: 10rem;
+}
 .w-2\/3 {
   width: 66.666667%;
 }
 .w-16 {
   width: 4rem;
-}
-.w-40 {
-  width: 10rem;
 }
 .max-w-screen-lg {
   max-width: 1024px;
@@ -727,15 +727,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .underline {
   text-decoration-line: underline;
-}
-.decoration-solid {
-  text-decoration-style: solid;
-}
-.underline-offset-0 {
-  text-underline-offset: 0px;
-}
-.underline-offset-1 {
-  text-underline-offset: 1px;
 }
 .opacity-50 {
   opacity: 0.5;
