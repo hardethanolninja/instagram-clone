@@ -444,6 +444,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.left-0 {
+  left: 0px;
+}
+.z-10 {
+  z-index: 10;
+}
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -502,6 +517,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mr-10 {
   margin-right: 2.5rem;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -535,6 +556,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-40 {
   height: 10rem;
 }
+.h-6 {
+  height: 1.5rem;
+}
 .w-full {
   width: 100%;
 }
@@ -555,6 +579,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-40 {
   width: 10rem;
+}
+.w-6 {
+  width: 1.5rem;
 }
 .w-2\/3 {
   width: 66.666667%;
@@ -596,8 +623,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-between {
   justify-content: space-between;
 }
+.justify-evenly {
+  justify-content: space-evenly;
+}
 .gap-4 {
   gap: 1rem;
+}
+.gap-8 {
+  gap: 2rem;
 }
 .gap-5 {
   gap: 1.25rem;
@@ -637,8 +670,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
 }
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+.bg-black-faded {
+  background-color: #00000059;
+}
 .fill-red-primary {
   fill: #e91e63;
+}
+.fill-white {
+  fill: #ffffff;
+}
+.object-cover {
+  object-fit: cover;
 }
 .p-4 {
   padding: 1rem;
@@ -676,6 +722,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-0 {
   padding-bottom: 0px;
+}
+.pt-4 {
+  padding-top: 1rem;
 }
 .text-center {
   text-align: center;
@@ -734,6 +783,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .opacity-25 {
   opacity: 0.25;
 }
+.opacity-0 {
+  opacity: 0;
+}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -744,4 +796,8 @@ body {
 
 .hover\:text-black-faded:hover {
   color: #00000059;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
