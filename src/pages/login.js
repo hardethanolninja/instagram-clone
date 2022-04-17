@@ -54,7 +54,7 @@ export default function Login() {
             <input
               aria-label="Enter your email address"
               type="text"
-              placeholder="jon@lienhard.dev"
+              placeholder="Username"
               className="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2 bg-gray-background"
               onChange={(e) => setEmailAddress(e.target.value)}
               value={emailAddress}

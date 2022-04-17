@@ -62,7 +62,15 @@ export default function Header({
         <img
           className="rounded-full h-40 w-40 flex"
           alt={`${profileUsername} profile picture`}
-          src={`./images/avatars/${profileUsername}.jpg`}
+          src={
+            profileUsername === 'jon' ||
+            profileUsername === 'orwell' ||
+            profileUsername === 'dali' ||
+            profileUsername === 'raphael' ||
+            profileUsername === 'candy'
+              ? `./images/avatars/${profileUsername}.jpg`
+              : `./images/avatars/default.png`
+          }
         />
       </div>
       <div className="flex items-center justify-center flex-col col-span-2">

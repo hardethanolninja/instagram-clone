@@ -29,7 +29,15 @@ export default function SuggestedProfile({
       <div className="flex items-center justify-between">
         <img
           className="rounded-full w-8 flex mr-3"
-          src={`./images/avatars/${username}.jpg`}
+          src={
+            username === 'jon' ||
+            username === 'orwell' ||
+            username === 'dali' ||
+            username === 'raphael' ||
+            username === 'candy'
+              ? `./images/avatars/${username}.jpg`
+              : `./images/avatars/default.png`
+          }
           alt={`${username} avatar`}
         />
         <Link to={`/p/${username}`}>
